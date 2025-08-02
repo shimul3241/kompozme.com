@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Grid Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+    }
+    header, aside {
+      background: #111;
+      color: white;
+      padding: 1rem;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    aside {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      bottom: 0;
+      width: 240px;
+    }
+    main {
+      margin-left: 240px;
+      padding: 80px 20px 20px;
+      max-width: 1280px;
+      margin-right: auto;
+      margin-left: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+      gap: 16px;
+    }
+    .video-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      cursor: pointer;
+      transition: box-shadow 0.2s ease;
+    }
+    .video-card:hover {
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
+    }
+    .thumbnail {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .video-info {
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .channel-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .video-texts {
+      flex: 1;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 0 0 6px 0;
+      line-height: 1.2;
+    }
+    .channel-name, .views-timestamp {
+      font-size: 0.85rem;
+      color: #555;
+    }
+    .duration {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0,0,0,0.8);
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+    .thumbnail-wrapper {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+  <aside>Sidebar</aside>
+  <main>
+    <!-- Video Cards -->
+    <div class="video-card">
+      <div class="thumbnail-wrapper">
+        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=225&fit=crop" alt="Building a Modern React Application with TypeScript" class="thumbnail" />
+        <div class="duration">15:32</div>
+      </div>
+      <div class="video-info">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="Code Academy" class="channel-avatar" />
+        <div class="video-texts">
+          <div class="title">Building a Modern React Application with TypeScript</div>
+          <div class="channel-name">Code Academy</div>
+          <div class="views-timestamp">1.2M views • 2 days ago</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat similar blocks for other videos -->
+
+  </main>
+</body>
+</html>
